@@ -16,6 +16,7 @@ public class FrameLotto extends JFrame implements ActionListener{
     private JTextField txtField;
     private JButton buttonOk;
     private JButton buttonRendez;
+    private JButton buttonUjJatek;
     private JPanel panelMain;
     private JComboBox comboBoxTipus;
     
@@ -46,16 +47,22 @@ public class FrameLotto extends JFrame implements ActionListener{
         
         this.buttonRendez = new JButton();
         this.buttonRendez.setText("Rendez");
-        this.buttonRendez.setLocation(20,50);
+        this.buttonRendez.setLocation(20,80);
         this.buttonRendez.setSize(250,25);
         this.buttonRendez.setFont(new Font("Arial", Font.PLAIN,20));
+        
+        this.buttonUjJatek = new JButton();
+        this.buttonUjJatek.setText("Új Játék");
+        this.buttonUjJatek.setLocation(20,110);
+        this.buttonUjJatek.setSize(250,25);
+        this.buttonUjJatek.setFont(new Font("Arial", Font.PLAIN,20));
         
         
         this.comboBoxTipus = new JComboBox();
         this.comboBoxTipus.addItem("Ötös");
         this.comboBoxTipus.addItem("Hatos");
         this.comboBoxTipus.addItem("Skandi");
-        this.comboBoxTipus.setLocation(20,80);
+        this.comboBoxTipus.setLocation(20,140);
         this.comboBoxTipus.setSize(200,50);
         this.txtField.setFont(new Font("Arial", Font.PLAIN,20));
         
@@ -63,6 +70,8 @@ public class FrameLotto extends JFrame implements ActionListener{
         this.panelMain.add(this.txtField);
         this.panelMain.add(this.buttonOk);
         this.panelMain.add(this.buttonRendez);
+        this.panelMain.add(this.buttonUjJatek);
+        
         this.buttonOk.addActionListener(this);
         this.buttonRendez.addActionListener(this);
         

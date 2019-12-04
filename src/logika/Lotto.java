@@ -43,5 +43,16 @@ public class Lotto {
     public void Rendez(){
         lottoSzamok.sort(Integer :: compareTo);
     }
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (Integer i : lottoSzamok) {
+            s += i +" ";
+        }
+        return s;
+    }
+    
+    
     
 }
