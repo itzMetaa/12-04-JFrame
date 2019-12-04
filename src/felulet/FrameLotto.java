@@ -21,6 +21,15 @@ public class FrameLotto extends JFrame{
         this.setTitle("Lottó");
         this.setSize(400,350);
         this.setLocationRelativeTo(null);
+        
+        this.panelMain = (JPanel)this.getContentPane();
+        this.panelMain.setLayout(null);
+        this.txtField = new JTextField();
+        this.txtField.setLocation(20,20);
+        this.txtField.setSize(250,20);
+        this.txtField.setText("Sajt uwu");
+        this.panelMain.add(this.txtField);
+        
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setResizable(false);
