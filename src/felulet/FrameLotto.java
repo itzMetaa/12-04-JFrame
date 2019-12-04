@@ -1,13 +1,15 @@
 
 package felulet;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
-public class FrameLotto extends JFrame{
+public class FrameLotto extends JFrame implements ActionListener{
 
     private JTextField txtField;
     private JButton buttonOk;
@@ -37,12 +39,20 @@ public class FrameLotto extends JFrame{
 
         this.panelMain.add(this.txtField);
         this.panelMain.add(this.buttonOk);
+        this.buttonOk.addActionListener(this);
         
         
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         this.setResizable(false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().equals(buttonOk)) {
+            txtField.setText("Hajrá 14/S!!xD:D))):)");
+        }
     }
     
 }
