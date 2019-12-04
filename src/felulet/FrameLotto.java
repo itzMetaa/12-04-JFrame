@@ -4,6 +4,7 @@ package felulet;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -14,6 +15,7 @@ public class FrameLotto extends JFrame implements ActionListener{
     private JTextField txtField;
     private JButton buttonOk;
     private JPanel panelMain;
+    private JComboBox comboBoxTipus;
     
     public FrameLotto() {
         initComponents();
@@ -37,11 +39,19 @@ public class FrameLotto extends JFrame implements ActionListener{
         this.buttonOk.setLocation(20,50);
         this.buttonOk.setSize(250,25);
 
+        this.comboBoxTipus = new JComboBox();
+        this.comboBoxTipus.addItem("Ötös");
+        this.comboBoxTipus.addItem("Hatos");
+        this.comboBoxTipus.addItem("Skandi");
+        this.comboBoxTipus.setLocation(20,80);
+        this.comboBoxTipus.setSize(200,50);
+        
+        
         this.panelMain.add(this.txtField);
         this.panelMain.add(this.buttonOk);
         this.buttonOk.addActionListener(this);
         
-        
+ 
         
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
