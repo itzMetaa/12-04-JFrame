@@ -14,6 +14,9 @@ public class FrameLotto extends JFrame{
         this.setTitle("Lottó");
         this.setSize(400,350);
         this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setVisible(true);
+        this.setResizable(false);
     }
     
 }
