@@ -11,7 +11,9 @@ public class FrameLotto extends JFrame{
     }
     
     private void initComponents(){
-    
+        this.setTitle("Lottó");
+        this.setSize(400,350);
+        this.setLocationRelativeTo(null);
     }
     
 }
